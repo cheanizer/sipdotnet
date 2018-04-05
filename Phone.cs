@@ -91,12 +91,16 @@ namespace sipdotnet
         /// <param name="error"></param>
 		public delegate void OnError (Call call, Error error);
 
+        public delegate void OnLoad(Call call);
+
 		public event OnPhoneConnected PhoneConnectedEvent;
 		public event OnPhoneDisconnected PhoneDisconnectedEvent;
 		public event OnIncomingCall IncomingCallEvent;
 		public event OnCallActive CallActiveEvent;
 		public event OnCallCompleted CallCompletedEvent;
 		public event OnError ErrorEvent;
+        public event OnLoad OnLoadEvent;
+        
 
 		Account account;
 
